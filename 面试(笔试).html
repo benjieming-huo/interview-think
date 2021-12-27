@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <script>
+        //1. 首字母转大写
+        function getToUpperCase(str) {
+            let array = str.split("_")
+            let arr = []
+            array.forEach((v, k) => {
+                if (k > 0) {
+                    arr.push(array[k][0].toUpperCase() + array[k].substring(1, array[k].length))
+                }
+            })
+            let fina = array[0] + arr.join('')
+            return fina
+        }
+        let fff = getToUpperCase('apple_pirfdfd_textsdfsd')
+        console.log(fff);
+    </script>
+</body>
+
+</html>
